@@ -23,4 +23,4 @@ mount --bind /dev ${MCHRDIR}/dev
 mount --bind /dev/pts ${MCHRDIR}/dev/pts
 mount --bind /proc  ${MCHRDIR}/proc
 
-echo chroot ${MCHRDIR}
+chroot ${MCHRDIR} /bin/bash -c '/etc/init.d/tvheadend start'
