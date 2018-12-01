@@ -11,7 +11,6 @@ This repository helps to install, configure and run tvheadend on your system ins
 ## Installation
 
 ```
-docker create --name tvheadendchroot marvambass/tvheadend
-docker cp tvheadendchroot:/ ./tvheadend
-docker rm -f tvheadendchroot
+docker create --name tvh marvambass/tvheadend && docker cp tvh:/ ./tvheadend && docker rm -f tvh
+cd ./tvheadend && ./chroot.sh
 ```
