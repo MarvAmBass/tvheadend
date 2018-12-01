@@ -11,6 +11,7 @@ RUN export DEBIAN_FRONTEND=noninteractive \
  \
  && echo "tvheadend tvheadend/admin_username string admin" | debconf-set-selections \
  && echo "tvheadend tvheadend/admin_password password password" | debconf-set-selections \
+ && echo "tvheadend tvheadend/webinterface note" | debconf-set-selections \
  \
  && apt-get -q -y update \
  && apt-get install -q -y --allow-unauthenticated tvheadend \
