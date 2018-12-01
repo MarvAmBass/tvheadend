@@ -15,10 +15,9 @@ docker create --name tvh marvambass/tvheadend && docker cp tvh:/ ./tvheadend && 
 cd ./tvheadend && ./chroot.sh
 ```
 
-Now the tvheadend application is not usable because there is no user to login. To fix this to the following:
+Open http://127.0.0.1:9981/ and login using:
 
-```
-cd ./tvheadend && chroot /usr/sbin/dpkg-reconfigure tvheadend && chroot /bin/bash -c '/etc/init.d/tvheadend stop && /etc/init.d/tvheadend start'
-```
+- Username: `admin`
+- Password: `password`
 
-Just follow the wizard to create a user etc. and open `http://servername|ip:9981/` and follow the setup wizard
+now you can just follow the wizard and configure your installation.
