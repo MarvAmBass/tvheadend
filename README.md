@@ -15,7 +15,7 @@ docker create --name tvh marvambass/tvheadend && docker cp tvh:/ ./tvheadend && 
 cd ./tvheadend && ./chroot.sh
 ```
 
-Now the tvheadend appliaction is not usable because there is no user to login. To fix this to the following:
+Now the tvheadend application is not usable because there is no user to login. To fix this to the following:
 
 ```
 cd ./tvheadend && chroot /usr/sbin/dpkg-reconfigure tvheadend && chroot /bin/bash -c '/etc/init.d/tvheadend stop && /etc/init.d/tvheadend start'
