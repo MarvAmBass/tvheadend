@@ -14,3 +14,11 @@ This repository helps to install, configure and run tvheadend on your system ins
 docker create --name tvh marvambass/tvheadend && docker cp tvh:/ ./tvheadend && docker rm -f tvh
 cd ./tvheadend && ./chroot.sh
 ```
+
+Now the tvheadend appliaction is not usable because there is no user to login. To fix this to the following:
+
+```
+cd ./tvheadend && chroot /usr/sbin/dpkg-reconfigure tvheadend && chroot /bin/bash -c '/etc/init.d/tvheadend stop && /etc/init.d/tvheadend start'
+```
+
+Just follow the wizard to create a user etc.
