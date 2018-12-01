@@ -15,3 +15,5 @@ RUN export DEBIAN_FRONTEND=noninteractive \
  && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 CMD echo /etc/init.d/tvheadend start
+
+COPY /root /
