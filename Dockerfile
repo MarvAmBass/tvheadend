@@ -11,6 +11,7 @@ RUN export DEBIAN_FRONTEND=noninteractive \
  \
  && apt-get -q -y update \
  && apt-get install -q -y --allow-unauthenticated tvheadend \
+ && rm -rf /home/hts/.hts \
  \
  && apt-get -q -y clean \
  && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
