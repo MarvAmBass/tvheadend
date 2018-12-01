@@ -21,3 +21,9 @@ Open http://127.0.0.1:9981/ and login using:
 - Password: `password`
 
 now you can just follow the wizard and configure your installation.
+
+If you still have troubles with login etc. you can do the following (only do this once):
+
+```
+chroot ./tvheadend /bin/bash -c 'dpkg-reconfigure tvheadend; /etc/init.d/tvheadend restart'
+```
