@@ -27,3 +27,9 @@ If you still have troubles with login etc. you can do the following (only do thi
 ```
 chroot ./tvheadend /bin/bash -c 'dpkg-reconfigure tvheadend; /etc/init.d/tvheadend restart'
 ```
+
+## Set localtime
+
+```
+chroot ./tvheadend /bin/bash -c 'dpkg-reconfigure tzdata; /etc/init.d/tvheadend stop; /etc/init.d/tvheadend start;'
+```
